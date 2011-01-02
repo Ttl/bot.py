@@ -1,5 +1,13 @@
 Bot.py
 
-Python library for making bots, that use mouse and keyboard and interact with display.
+Python library for making bots that use mouse and keyboard, and interact with display.
 
 See bejeweled.py for example.
+
+Currently linux only. Mouse should already work. And adding windows and mac support should be easy.
+
+Linux depencies:
+    PIL
+    xlib
+    gtk
+    pyatspi
