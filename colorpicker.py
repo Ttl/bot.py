@@ -1,15 +1,12 @@
 """Program for picking colors from screen."""
-from main import *
+from bot import *
+import sys
 
-def init():
-    global ox,oy
-    #Set origin
-    sx, sy = getScreenSize()
-    ox,oy = findColor(0,0,sx,sy,(232,64,207))
-    mouseMove(0,0)
-
-#init()
-ox,oy = (0,0)
+if len(sys.argv)==3:
+    ox = int(sys.argv[1])
+    oy = int(sys.argv[2])
+else:
+    ox,oy = (0,0)
 prev=(-1,-1)
 while True:
     temp = mousePos()
