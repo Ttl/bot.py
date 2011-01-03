@@ -4,7 +4,7 @@ Press <Ctrl>+A to add pixel to dtm,
 <Ctrl>S to clear DTM
 and <Ctrl>D to print color under cursor"""
 
-from main import *
+from bot import *
 import gtk
 import keybinder
 
