@@ -1,12 +1,13 @@
 """Program for picking colors from screen."""
-from bot import *
+from mouse import *
+from screen import *
 import sys
 
-if len(sys.argv)==3:
+ox,oy = (0,0)
+if len(sys.argv)>=3:
     ox = int(sys.argv[1])
     oy = int(sys.argv[2])
-else:
-    ox,oy = (0,0)
+
 prev=(-1,-1)
 while True:
     temp = mousePos()
