@@ -35,7 +35,11 @@ def findPlay():
 def init():
     #Set origin
     originDTM = DTM({(0, 0): (232, 64, 207), (450, 323): (150, 137, 46)})
-    setOrigin(findDTM(originDTM,0,0,sx,sy))
+    origin = findDTM(originDTM,0,0,sx,sy)
+    if origin==False:
+        print "Couldn't find the game!"
+        quit(0)
+    setOrigin(origin)
     #setOrigin(findColor(0,0,sx,sy,(232,64,207)))#Alternative way using colors
     mouseClick(0,0,True)#Focus window
     sleep(0.2)
